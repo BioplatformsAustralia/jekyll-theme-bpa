@@ -16,7 +16,7 @@
   <meta name="google-site-verification" content="SALCs2HUU_-WFKh7s27fxGa7XLBp32nGuuA5zgtr3Zk"/>
   <meta name="msvalidate.01" content="DF3D66336DE6B56D6818F9FD7BE04800"/>
 
-    <title>data.bioplatforms.com User Support</title>
+    <title>{{ site.title }}</title>
 
     
     
@@ -164,7 +164,7 @@
                     
 <li class="home"><a href="https://data.bioplatforms.com/"><i class="fa fa-home"></i><span> Home</span></a></li>
                     
-  <li class="active"><a class=" active" href="/">User Support</a></li>
+  <li class="active"><a class=" active" href="{{ site.baseurl">{{ site.description }}</a></li>
   <li class="active"><a class=" active" href="{{ page.url }}">{{ page.title }}</a></li>
 
                   </ol>
@@ -173,8 +173,50 @@
             </div>
           
 
-          <div class="row wrapper no-nav">
+          <div class="row wrapper">
             
+<aside class="secondary col-sm-3">
+                
+                
+<div class="filters">
+  <div>
+      
+        <section class="module module-narrow module-shallow">
+          
+  <h2 class="module-heading">
+    <i class="fa fa-filter"></i>
+    
+    {{ site.data.usersupport.docs_list_title }}
+  </h2>
+            
+              <nav>
+                <ul class="list-unstyled nav nav-simple nav-facet">
+                  
+                    
+                    
+                {% for item in site.data.samplelist.docs %}
+                    
+                      <li class="nav-item">
+                        <a href="{{ item.url }}" title="{{ item.title }}">
+                          <span class="item-label">{{ item.title }}</span>
+                        </a>
+                      </li>
+                  
+                    
+                    
+	         {% endfor %}
+                    
+                  
+                </ul>
+              </nav>
+
+        </section>
+      
+  </div>
+</div>
+
+
+</aside>
             
             
 
